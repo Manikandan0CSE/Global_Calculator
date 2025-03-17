@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Functional Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Multi-Functional Calculator</h1>
+    <div class="calculator">
+      <div class="menu">
+        <button onclick="showSection('basic')">Basic Operations</button>
+        <button onclick="showSection('currency')">Currency Conversion</button>
+        <button onclick="showSection('bmi')">BMI Calculator</button>
+        <button onclick="showSection('age')">Age Calculator</button>
+        <button onclick="showSection('emi')">EMI Calculator</button>
+        <button onclick="showSection('area')">Area Calculator</button>
+        <button onclick="showSection('volume')">Volume Calculator</button>
+        <button onclick="showSection('scientific')">Scientific Calculator</button>
+      </div>
+
+      <!-- Basic Operations -->
+      <div id="basic" class="section">
+        <h2>Basic Operations</h2>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <button onclick="add()">Add</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <p id="basic-result"></p>
+      </div>
+
+      <!-- Currency Conversion -->
+      <div id="currency" class="section" style="display: none;">
+        <h2>Currency Conversion</h2>
+        <input type="number" id="amount" placeholder="Enter amount">
+        <select id="from-currency">
+          <option value="USD">USD</option>
+          <option value="INR">INR</option>
+          <option value="EUR">EUR</option>
+        </select>
+        <select id="to-currency">
+          <option value="USD">USD</option>
+          <option value="INR">INR</option>
+          <option value="EUR">EUR</option>
+        </select>
+        <button onclick="convertCurrency()">Convert</button>
+        <p id="currency-result"></p>
+      </div>
+
+      <!-- BMI Calculator -->
+      <div id="bmi" class="section" style="display: none;">
+        <h2>BMI Calculator</h2>
+        <input type="number" id="weight" placeholder="Enter weight (kg)">
+        <input type="number" id="height" placeholder="Enter height (m)">
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <p id="bmi-result"></p>
+      </div>
+
+      <!-- Age Calculator -->
+      <div id="age" class="section" style="display: none;">
+        <h2>Age Calculator</h2>
+        <input type="number" id="birth-year" placeholder="Enter birth year">
+        <button onclick="calculateAge()">Calculate Age</button>
+        <p id="age-result"></p>
+      </div>
+
+      <!-- EMI Calculator -->
+      <div id="emi" class="section" style="display: none;">
+        <h2>EMI Calculator</h2>
+        <input type="number" id="principal" placeholder="Enter principal amount">
+        <input type="number" id="rate" placeholder="Enter interest rate (%)">
+        <input type="number" id="tenure" placeholder="Enter tenure (months)">
+        <button onclick="calculateEMI()">Calculate EMI</button>
+        <p id="emi-result"></p>
+      </div>
+
+      <!-- Area Calculator -->
+      <div id="area" class="section" style="display: none;">
+        <h2>Area Calculator</h2>
+        <input type="number" id="length" placeholder="Enter length">
+        <input type="number" id="width" placeholder="Enter width">
+        <button onclick="calculateArea()">Calculate Area</button>
+        <p id="area-result"></p>
+      </div>
+
+      <!-- Volume Calculator -->
+      <div id="volume" class="section" style="display: none;">
+        <h2>Volume Calculator</h2>
+        <input type="number" id="v-length" placeholder="Enter length">
+        <input type="number" id="v-width" placeholder="Enter width">
+        <input type="number" id="v-height" placeholder="Enter height">
+        <button onclick="calculateVolume()">Calculate Volume</button>
+        <p id="volume-result"></p>
+      </div>
+
+      <!-- Scientific Calculator -->
+      <div id="scientific" class="section" style="display: none;">
+        <h2>Scientific Calculator</h2>
+        <button onclick="calculateSquareRoot()">Square Root</button>
+        <button onclick="calculatePower()">Power</button>
+        <button onclick="calculateLog()">Logarithm (base 10)</button>
+        <p id="scientific-result"></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
